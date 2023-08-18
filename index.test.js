@@ -41,5 +41,5 @@ test('lambdaHandler returns correct greeting in message', async() => {
     const result = await lambdaHandler(event);
     const body = JSON.parse(result.body);
 
-    expect(body.message).toMatch(/(Good morning|Good afternoon|Good evening)! The time now is \d{2}-\d{2}-\d{4} \d{2}:\d{2}:\d{2}\+\d{2}:\d{2}/)
+    expect(body.message).toMatch(/(Good morning|Good afternoon|Good evening)! The time now is \d{2}-\d{2}-\d{4} \d{2}:\d{2}:\d{2}(\+\d{2}:\d{2}|Z)/)
 });
