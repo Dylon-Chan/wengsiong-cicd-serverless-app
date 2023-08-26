@@ -5,6 +5,8 @@ provider:
   name: aws
   runtime: nodejs18.x
   region: ap-southeast-1
+  deploymentBucket:
+    name: cohort2.serverless.deploys
 
 functions:
   greeting:
